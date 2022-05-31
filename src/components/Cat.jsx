@@ -4,6 +4,7 @@ import { useGLTF } from '@react-three/drei'
 function Cat(props) {
     const group = useRef()
     const { nodes, materials } = useGLTF('src/robot.gltf')
+ 
     return (
       <group ref={group} {...props} dispose={null}>
         <group position={[0, 0, 0]} scale={10}>
@@ -19,15 +20,16 @@ function Cat(props) {
             <skinnedMesh geometry={nodes['node_Soft_04_-5192'].geometry} material={materials.Lieutenant_Head} skeleton={nodes['node_Soft_04_-5192'].skeleton} position={[-0.02, 0, 0.06]} rotation={[-Math.PI / 2, 0, 0]} />
             <skinnedMesh geometry={nodes['node_Soft_00_-5184'].geometry} material={materials.Lieutenant_Head} skeleton={nodes['node_Soft_00_-5184'].skeleton} position={[0.04, 0.01, -0.04]} rotation={[-Math.PI / 2, 0, 0]} />
           </group>
-          <mesh geometry={nodes['node_Bandages_-5158'].geometry} material={materials.Lieutenant_Head} position={[0, -1.61, 0]} scale={10} />
-          <mesh geometry={nodes['node_Body_-5160'].geometry} material={materials.body} position={[0, -1.61, 0]} scale={10} />
-          <mesh geometry={nodes['node_Head_-5164'].geometry} material={materials.Lieutenant_Head} position={[0, -1.61, 0]} scale={10} />
+          <mesh geometry={nodes['node_Bandages_-5158'].geometry} material={materials.Lieutenant_Head} material={materials.metal}  material-color="#131618"  position={[0, -1.61, 0]} scale={10} />
+          <mesh geometry={nodes['node_Body_-5160'].geometry} material={materials.body} material={materials.metal} material-color="black"  position={[0, -1.61, 0]}  scale={10} />
+          <mesh geometry={nodes['node_Head_-5164'].geometry} material={materials.Lieutenant_Head} material={materials.metal} material-color="black" position={[0, -1.61, 0]} scale={10} />
           <group position={[0, 0, -0.05]} rotation={[Math.PI, 1.56, Math.PI / 2]} scale={0.99}>
-            <mesh geometry={nodes.mesh_eyes_10628Lieutenant_Eyes.geometry} material={materials.Lieutenant_Head} />
-            <mesh geometry={nodes.mesh_eyes_10628Lieutenant_Eyes_1.geometry} material={materials.lens} />
+            <mesh geometry={nodes.mesh_eyes_10628Lieutenant_Eyes.geometry} material={materials.Lieutenant_Head} material={materials.metal} material-color="black" />
+            <mesh geometry={nodes.mesh_eyes_10628Lieutenant_Eyes_1.geometry} material={materials.lens} material={materials.metal}material-color="#8C0000"  />
           </group>
-          <mesh geometry={nodes['node_Jacket_clean_-5168'].geometry} material={materials.Lieutenant_Jacket} position={[0, -1.61, 0]} rotation={[Math.PI / 2, 0, 0]} scale={10} />
-          <mesh geometry={nodes['node_Jacket_details_clean_-5170'].geometry} material={materials.Lieutenant_Jacket} position={[0, -1.61, 0]} rotation={[Math.PI / 2, 0, 0]} scale={10} />
+          <mesh geometry={nodes['node_Jacket_clean_-5168'].geometry} material={materials.Lieutenant_Jacket} material={materials.metal} material-color="black"  position={[0, -1.61, 0]} rotation={[Math.PI / 2, 0, 0]} scale={10} />
+          <mesh geometry={nodes['node_Jacket_details_clean_-5170'].geometry}  material={materials.Lieutenant_Jacket} material={materials.metal} material-color="black"  position={[0, -1.61, 0]} rotation={[Math.PI / 2, 0, 0]} scale={10} />
+        
         </group>
       </group>
     )

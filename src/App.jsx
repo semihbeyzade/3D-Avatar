@@ -1,7 +1,9 @@
 import React, { Suspense, useRef } from 'react'
 import {Canvas, useFrame} from '@react-three/fiber'
-import { Stars } from '@react-three/drei'
+import { Stars, OrbitControls } from '@react-three/drei'
+import {proxy, useSnapshot} from 'valtio'
 import Cat from './components/Cat'
+import Heykel from './components/Heykel'
 
 // scene => sahne
 // geometry => döndürmek istedigimiz nesne
@@ -11,15 +13,20 @@ import Cat from './components/Cat'
 
 function App() {
   return (
+    
   <Canvas>
     <Stars />
+    <OrbitControls />
     <ambientLight />
     <pointLight position={[10,10,10]}  />
-    <Suspense fallback={null}>
+  {/*   <Suspense fallback={null}>
     <Cat />
-    </Suspense>
-    
+    </Suspense> */}
+    <Suspense fallback={null}>
+    <Heykel />
+    </Suspense> 
   </Canvas>
+  
   )
 }
 
