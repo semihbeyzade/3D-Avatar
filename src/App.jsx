@@ -1,10 +1,25 @@
-import React from 'react'
+import React, { Suspense, useRef } from 'react'
+import {Canvas, useFrame} from '@react-three/fiber'
+import { Stars } from '@react-three/drei'
+import Cat from './components/Cat'
+
+// scene => sahne
+// geometry => döndürmek istedigimiz nesne
+// material => renk,
+// mesh => geometry, material
+
 
 function App() {
   return (
-    <div>
-      <h1>Hello</h1>
-    </div>
+  <Canvas>
+    <Stars />
+    <ambientLight />
+    <pointLight position={[10,10,10]}  />
+    <Suspense fallback={null}>
+    <Cat />
+    </Suspense>
+    
+  </Canvas>
   )
 }
 
