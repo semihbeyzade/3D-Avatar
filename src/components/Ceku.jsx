@@ -1,11 +1,18 @@
 import React, { useRef } from 'react'
 import { useGLTF } from '@react-three/drei'
+import { useFrame } from '@react-three/fiber'
 import { useSnapshot } from 'valtio'
 
 function Ceku ({ state, onPointerOver, onPointerOut, onPointerDown, onPointerMissed, ...rest}) {
     const snap = useSnapshot(state)
     const group = useRef();
     const { nodes, materials } = useGLTF('src/heykel.gltf')
+
+    useFrame((state) => {
+      const t = state.clock.getElapsedTime()
+      group.current.rotation.y = Math.sin(t / 4) / 4
+      group.current.position.y = (1 + Math.sin(t / 1.5)) / 2
+    })
     return (
         <group 
         ref={group} 

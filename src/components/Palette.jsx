@@ -10,10 +10,15 @@ const snap = useSnapshot(state)
    style={{
      position: "absolute",
      top: "74px",
-     left: "70px"
+     left: "70px",
+  
    }}
    >
-    <HexColorPicker color={snap.items[snap.current]} onChange={(color) => (state.items[snap.current] = color)} />
+    <HexColorPicker 
+    color={snap.items[snap.current]} 
+    onChange={(color) => (state.items[snap.current] = color)} 
+    />
+    
    </div>
   )
 }
