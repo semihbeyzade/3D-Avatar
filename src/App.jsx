@@ -1,6 +1,10 @@
-import React, {useState} from "react";
+import React, {useState, Suspense} from "react";
 import ContainerCeku from "./components/ContainerCeku";
-import Deneme from "./components/Deneme";
+import ContainerDonut from "./components/ContainerDonut";
+
+
+
+
 
 // scene => sahne
 // geometry => döndürmek istedigimiz nesne
@@ -12,7 +16,12 @@ function App() {
 
   return (
     <>
-     <ContainerCeku /> 
+    <button onClick={() => setValid(!valid)}>Click</button>
+    {valid ? <ContainerCeku /> :  <ContainerDonut />}
+   
+   
+    
+    
     </>
   );
 }

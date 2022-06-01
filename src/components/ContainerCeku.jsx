@@ -52,7 +52,7 @@ function ContainerCeku() {
       state.current = null;
     };
   
-    console.log(state.current);
+
   
     return (
       <>
