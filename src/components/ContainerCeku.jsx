@@ -20,7 +20,7 @@ const state = proxy({
   });
   
 
-function ContainerCeku() {
+function ContainerCeku(props) {
   
     const snap = useSnapshot(state);
     const [hovered, set] = useState(null);
@@ -56,6 +56,12 @@ function ContainerCeku() {
   
     return (
       <>
+        <button  onClick={() => {
+            props.setCurrentStep(1);
+          }}>Donut</button>
+          <button  onClick={() => {
+            props.setCurrentStep(3);
+          }}>Vespa</button>
         <Palette state={state}/>
         <Canvas>
           <Stars />
