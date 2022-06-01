@@ -4,6 +4,7 @@ import { Stars, OrbitControls } from "@react-three/drei";
 import { proxy, useSnapshot } from "valtio";
 import Vespa from "./Vespa";
 import Palette from './Palette';
+import './vespa.css'
 
 const state = proxy({
     current: null,
@@ -52,13 +53,15 @@ function ContainerVespa(props) {
 
   
     return (
-      <>
-        <button  onClick={() => {
+      <div className="vespa">
+          <div className="vespa-btn">
+        <button className="vespa-btn_left" onClick={() => {
             props.setCurrentStep(1);
-          }}>Donut</button>
-          <button  onClick={() => {
-            props.setCurrentStep(2);
-          }}>Ceku</button>
+          }}><i class="fas fa-arrow-alt-circle-left"></i></button>
+          <button className="vespa-btn_right"  onClick={() => {
+            props.setCurrentStep(3);
+          }}><i class="fas fa-arrow-alt-circle-right"></i></button>
+          </div>
         <Palette state={state}/>
         <Canvas>
           <Stars />
@@ -75,7 +78,7 @@ function ContainerVespa(props) {
             />
           </Suspense>
         </Canvas>
-      </>
+      </div>
     );
   
 }

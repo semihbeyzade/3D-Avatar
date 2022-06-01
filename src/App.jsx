@@ -23,10 +23,10 @@ function App() {
      }
 
      {
-       (currentStep === 2) ? <ContainerCeku setCurrentStep={setCurrentStep}/> : null
+       (currentStep === 2) ? <ContainerVespa setCurrentStep={setCurrentStep}/> : null
      }
       {
-       (currentStep === 3) ? <ContainerVespa setCurrentStep={setCurrentStep}/> : null
+       (currentStep === 3) ? <ContainerCeku setCurrentStep={setCurrentStep}/> : null
      }
     </>
   );

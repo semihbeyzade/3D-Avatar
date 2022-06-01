@@ -4,6 +4,7 @@ import { Stars, OrbitControls } from "@react-three/drei";
 import { proxy, useSnapshot } from "valtio";
 import Ceku from './Ceku';
 import Palette from './Palette';
+import './ceku.css'
 
 const state = proxy({
     current: null,
@@ -55,13 +56,15 @@ function ContainerCeku(props) {
 
   
     return (
-      <>
-        <button  onClick={() => {
+      <div className="ceku">
+        <div className="ceku-btn">
+        <button className="ceku-btn_left" onClick={() => {
             props.setCurrentStep(1);
-          }}>Donut</button>
-          <button  onClick={() => {
-            props.setCurrentStep(3);
-          }}>Vespa</button>
+          }}><i class="fas fa-arrow-alt-circle-left"></i></button>
+          <button className="ceku-btn_right" onClick={() => {
+            props.setCurrentStep(2);
+          }}><i class="fas fa-arrow-alt-circle-right"></i></button>
+          </div>
         <Palette state={state}/>
         <Canvas>
           <Stars />
@@ -78,7 +81,7 @@ function ContainerCeku(props) {
             />
           </Suspense>
         </Canvas>
-      </>
+      </div>
     );
   
 }
