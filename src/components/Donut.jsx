@@ -13,7 +13,7 @@ function Donut({
 }) {
   const snap = useSnapshot(state);
   const group = useRef();
-  const { nodes, materials } = useGLTF("src/donut/donut.gltf");
+  const { nodes, materials } = useGLTF("/donut/donut.gltf");
 
   useFrame((state) => {
     const t = state.clock.getElapsedTime();

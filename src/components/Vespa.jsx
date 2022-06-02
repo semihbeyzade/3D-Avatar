@@ -7,7 +7,7 @@ import { useSnapshot } from 'valtio'
 function Vespa({ state, onPointerOver, onPointerOut, onPointerDown, onPointerMissed, ...rest}) {
     const snap = useSnapshot(state)
     const group = useRef();
-    const { nodes, materials } = useGLTF('src/vespa/vespa.gltf')
+    const { nodes, materials } = useGLTF('/vespa/vespa.gltf')
 
   /*   useFrame((state) => {
       const t = state.clock.getElapsedTime()

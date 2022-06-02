@@ -6,7 +6,7 @@ import { useSnapshot } from 'valtio'
 function Ceku ({ state, onPointerOver, onPointerOut, onPointerDown, onPointerMissed, ...rest}) {
     const snap = useSnapshot(state)
     const group = useRef();
-    const { nodes, materials } = useGLTF('src/ceku/heykel.gltf')
+    const { nodes, materials } = useGLTF('/ceku/heykel.gltf')
 
     useFrame((state) => {
       const t = state.clock.getElapsedTime()
