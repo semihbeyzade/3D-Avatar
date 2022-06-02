@@ -9,7 +9,7 @@
 
 - Frontend : React, Three.js, CSS
 
-- Tools : Github, VSCode, Github, Vercel 
+- Tools : Github, VSCode, Github, Vite, Vercel 
 
 ## Reference Images :
 
