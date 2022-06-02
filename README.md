@@ -11,5 +11,5 @@
 
 ## Reference Images :
 
-<img src="public/img/video1.gif" height="400" /><img src="public/img/video2.gif" align="center"  height="400" /><img src="public/img/video3.gif" height="400" align="right"  />
+<img src="public/img/video1.gif" height="400" /><p><img src="public/img/video2.gif" align="center"  height="400" /></p><img src="public/img/video3.gif" height="400" align="right"  />
 
