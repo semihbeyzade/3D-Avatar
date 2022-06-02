@@ -12,8 +12,8 @@
 ## Reference Images :
 
 <p align="center" width="100%">
-  <img src="public/img/video1.gif"  width="30%" />
-  <img src="public/img/video2.gif"  width="30%" />
-  <img src="public/img/video3.gif"  width="30%" />
+  <img src="public/img/video1.gif"  width="25%" height="400"/>
+  <img src="public/img/video2.gif"  width="25%" height="400"/>
+  <img src="public/img/video3.gif"  width="25%" height="400" />
 </p>
 
