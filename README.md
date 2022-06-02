@@ -1,6 +1,6 @@
 ## PaintFun
 
-- Nachdem du dein Object auswählt, kansst du anfangen, zu malen. Viel Spaß!....
+- Wählen Sie Ihr Objekt aus und fangen Sie an, zu malen. Viel Spaß!....
 
 * [Der Link von Projekt](https://3-d-avatar-semihbeyzade.vercel.app/)
 
